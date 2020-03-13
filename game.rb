@@ -32,6 +32,7 @@ class Game
   private
 
   def get_move
+    puts "Enter action, and pos!"
     action_type, row_s, col_s = gets.chomp.split(",")
 
     [action_type, [row_s.to_i, col_s.to_i]]
