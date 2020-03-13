@@ -36,7 +36,7 @@ class Game
     puts "For example, 'e12"
     puts "action types are: e for explore, f for flag, and s for save."
     action_type, row_s, col_s = gets.chomp.split("")
-    action_type = action_type.upcase
+    action_type = action_type.downcase
     [action_type, [row_s.to_i, col_s.to_i]]
   end
 
