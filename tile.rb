@@ -17,8 +17,6 @@ class Tile
     @bombed, @explored, @flagged = false, false, false
   end
 
-  # ugh. can't have an ivar ending in a '?' means we can't use
-  # attr_reader.
   def bombed?
     @bombed
   end

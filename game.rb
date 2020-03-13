@@ -32,7 +32,9 @@ class Game
   private
 
   def get_move
-    puts "Enter action, and pos!"
+    puts "Enter move in the following format: move,row,column."
+    puts "For example, 'e,1,2"
+    puts "action types are: e for explore, f for flag, and s for save."
     action_type, row_s, col_s = gets.chomp.split(",")
 
     [action_type, [row_s.to_i, col_s.to_i]]
@@ -42,11 +44,11 @@ class Game
     tile = @board[pos]
 
     case action_type
-    when "f"
+    when "f" || "F"
       tile.toggle_flag
-    when "e"
+    when "e" || "E"
       tile.explore
-    when "s"
+    when "s" "S"
       # won't quit on save, just hit ctr-c to do that.
       save
     end
