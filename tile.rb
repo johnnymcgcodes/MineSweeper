@@ -2,17 +2,14 @@ require_relative "Board"
 require "colorize"
 
 class Tile
+  attr_accessor :value
 
   def initialize(value)
     @value = value
-    @given = false
+    @revealed = false
   end
 
-  def given?
-    @given
-  end
-
-  
+ 
 
 
 
