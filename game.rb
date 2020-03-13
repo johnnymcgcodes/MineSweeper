@@ -35,7 +35,7 @@ class Game
     puts "Enter move in the following format: move,row,column."
     puts "For example, 'e12"
     puts "action types are: e for explore, f for flag, and s for save."
-    action_type, row_s, col_s = gets.chomp.split("").upcase
+    action_type, row_s, col_s = gets.chomp.split("")
     action_type = action_type.upcase
     [action_type, [row_s.to_i, col_s.to_i]]
   end
